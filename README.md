@@ -1,4 +1,5 @@
-# This Fork
+# This Fork ![image](https://user-images.githubusercontent.com/4029/143136924-31405934-8c83-48e8-be76-bb9756db7269.png)
+
 
 This is forked from https://github.com/nimblemachines/kinetis-chip-equates.  The name has been changed to protect the diginity of the daf from the
 doodlings of the doof.  For now I've kept the original README below, although that optimistic section "What if my chip is missing?" and the MCUXpresso SDK Builder 
@@ -17,8 +18,7 @@ Hence, in this repo you'll find Makefile_original and Makefile_esp and original_
 This code, whether this fork or the original is currently brittle and has multiple issues handling svd files that don't fit its expectations.  As work on 
 origin/master is low priority at the moment, you're on your own.  Expect things to break, expect to dive in and get your hands dirty if you're trying extract
 equates from something. **Inclusion of an SVD in the [muforth-anarchitech](https://github.com/anarchitech/muforth-anarchitech) fork is not a guarantee that it will work
-OOTB with The Equatesinator!** For example, this morning during testing we're finding that esp32.svd and esp32_base.svd are flailing badly.
-
+OOTB with The Equatesinator!** 
 ### Example: Build esp8266.mu4
 ```
 cd equatesinator
