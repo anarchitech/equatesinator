@@ -17,7 +17,7 @@ cp Makefile_esp8266 Makefile
 make update
 make esp8266.mu4
 ```
-Then, because you'll likely want vectors for the rp2040 and eveything else:
+Then, because you'll likely want vectors for the rp2040 and everything else:
 ```
 cp Makefile_original Makefile
 make update
