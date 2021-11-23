@@ -14,7 +14,7 @@ peristaltically convulsing gluttonous Mr Creosote. There are svd's out there for
 Hence, in this repo you'll find Makefile_original and Makefile_esp and original_print-regs-generic.lua and novectors_print-regs-generic.lua
 
 ## Warning
-This code, whether this fork or the original is currently brittle and has multiple issues handling svd files that don't fix its expectations.  As work on 
+This code, whether this fork or the original is currently brittle and has multiple issues handling svd files that don't fit its expectations.  As work on 
 origin/master is low priority at the moment, you're on your own.  Expect things to break, expect to dive in and get your hands dirty if you're trying extract
 equates from something. **Inclusion of an SVD in the [muforth-anarchitech](https://github.com/anarchitech/muforth-anarchitech) fork is not a guarantee that it will work
 OOTB with The Equatesinator!** For example, this morning during testing we're finding that esp32.svd and esp32_base.svd are flailing badly.
