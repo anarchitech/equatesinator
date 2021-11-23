@@ -1,3 +1,32 @@
+# This Fork
+
+This is forked from https://github.com/nimblemachines/kinetis-chip-equates.  The name has been changed to protect the diginity of the daf from the
+doodlings of the doof.  For now I've kept the original README below, although that bit "What if my chip is missing?" and the MCUXpresso SDK Builder 
+should be ignored. I feel like it's a bit misleading; the only focus of that weird online SDK seems to be NXP products. 
+
+You're far better off just copying Makefile_original and hacking it. It's pretty obvious, just make sure that your source file is NAME.svd 
+as opposed to, say, esp8266.base.svd.  That one broke the lua script. (You can also look at the Makefile_esp8266 to see what I had to do there to 
+handle a less than complete svd file.)
+
+One change is that there will be multiple Makefiles to handle certain differences in svd's. There are svd's out there for the ESP8266, for example,
+that are ... less than complete, shall we say.  So, in this repo, right now you'll find Makefile_original and Makefile_esp8266 for example.  
+
+```
+cd equatesinator
+cp Makefile_esp8266 Makefile
+make update
+make esp8266.mu4
+```
+Then, because you'll likely want vectors for the rp2040 and eveything else:
+```
+cp Makefile_original Makefile
+make update
+make rp2040.mu4
+```
+Always keep the Makefile_original in its original state.
+
+I'm not going to spend many cycles improving this thing.  If you need it, you need it, if you don't, you don't.  It's very muforth specific.
+
 # Why?
 
 One of the issues with rolling your own language &ndash; especially if, like [muforth](https://muforth.nimblemachines.com/), it is a cross-compiler that targets microcontrollers &ndash; is that you need to find or create, for every chip you care about, "equates" files that describe the i/o registers, their memory addresses, and their bit definitions.
