@@ -1,16 +1,16 @@
 # This Fork
 
 This is forked from https://github.com/nimblemachines/kinetis-chip-equates.  The name has been changed to protect the diginity of the daf from the
-doodlings of the doof.  For now I've kept the original README below, although that bit "What if my chip is missing?" and the MCUXpresso SDK Builder 
+doodlings of the doof.  For now I've kept the original README below, although that optimistic section "What if my chip is missing?" and the MCUXpresso SDK Builder 
 should be ignored. I feel like it's a bit misleading; the only focus of that weird online SDK seems to be NXP products. 
 
 You're far better off just copying Makefile_original and hacking it. It's pretty obvious, just make sure that your source file is NAME.svd 
-as opposed to, say, esp8266.base.svd.  That one broke the lua script. (You can also look at the Makefile_esp8266 to see what I had to do there to 
-handle a less than complete svd file.)
+as opposed to, say, esp8266.base.svd.  That one broke the lua script. (You can also look at the Makefile_esp8266 and novectors_print-regs-generic.lua
+to see what I had tweak to handle a less than complete svd file.)
 
-One change is that there will be multiple Makefiles to handle certain differences in svd's. There are svd's out there for the ESP8266, for example,
-that are ... less than complete, shall we say.  So, in this repo, right now you'll find Makefile_original and Makefile_esp8266 and original_print-regs-generic.lua
-and novectors_print-regs-generic.lua
+One change is that there will likely be multiple Makefiles to handle certain differences in svd's. I'd rather do that than watch a damn Makefile grow into some
+peristaltically convulsing gluttonous Mr Creosote. There are svd's out there for the ESP8266, for example, that are ... less than complete, shall we say.  
+Hence, in this repo right now you'll find Makefile_original and Makefile_esp8266 and original_print-regs-generic.lua and novectors_print-regs-generic.lua
 
 ### Example: Build esp8266.mu4
 ```
