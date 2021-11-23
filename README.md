@@ -10,7 +10,14 @@ to see what I had tweak to handle a less than complete svd file.)
 
 One change is that there will likely be multiple Makefiles to handle certain differences in svd's. I'd rather do that than watch a damn Makefile grow into some
 peristaltically convulsing gluttonous Mr Creosote. There are svd's out there for the ESP8266, for example, that are ... less than complete, shall we say.  
-Hence, in this repo right now you'll find Makefile_original and Makefile_esp and original_print-regs-generic.lua and novectors_print-regs-generic.lua
+
+Hence, in this repo you'll find Makefile_original and Makefile_esp and original_print-regs-generic.lua and novectors_print-regs-generic.lua
+
+## Warning
+This code, whether this fork or the original is currently brittle and has multiple issues handling svd files that don't fix its expectations.  As work on 
+origin/master is low priority at the moment, you're on your own.  Expect things to break, expect to dive in and get your hands dirty if you're trying extract
+equates from something. **Inclusion of an SVD in the [muforth-anarchitech](https://github.com/anarchitech/muforth-anarchitech) fork is not a guarantee that it will work
+OOTB with The Equatesinator!** For example, this morning during testing we're finding that esp32.svd and esp32_base.svd are flailing badly.
 
 ### Example: Build esp8266.mu4
 ```
