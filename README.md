@@ -1,4 +1,4 @@
-# This Fork ![image](https://user-images.githubusercontent.com/4029/143136924-31405934-8c83-48e8-be76-bb9756db7269.png)
+# The Equatesinator ![image](https://user-images.githubusercontent.com/4029/143136924-31405934-8c83-48e8-be76-bb9756db7269.png)
 
 
 This is forked from https://github.com/nimblemachines/kinetis-chip-equates.  The name has been changed to protect the diginity of the daf from the
