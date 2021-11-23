@@ -1,5 +1,6 @@
 /*.mu4
 /MK*.lua
+/esp8266.lua
 /rp2040.lua
 /pack/
 /svd/
