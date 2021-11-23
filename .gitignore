@@ -1,6 +1,11 @@
 /*.mu4
 /MK*.lua
 /esp8266.lua
+/esp32.lua
+/esp32_base.lua
+/esp32c3.lua
+/esp32s2.lua
+/esp32s3.lua
 /rp2040.lua
 /pack/
 /svd/

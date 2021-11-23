@@ -7,7 +7,12 @@ FRDM_FILES=	$(wildcard svd/MK*.xml) KSDK-1.3.0/MKL25Z4.svd
 FRDM_CHIPS=	$(basename $(notdir $(FRDM_FILES)))
 
 # Let's do a very small subset right now. Things are pretty broken.
-ALL_CHIPS=	MKL25Z4 MKL26Z4 MKL46Z4 rp2040 esp8266
+# zhora6: We've purloined the esp svd's from our friendly Rust neighbors
+# who have split them up into two files in the case of the esp32, so
+# we'll have to pretend we have two flavors of chip for the moment until
+# we get this sorted out.
+#
+ALL_CHIPS=	MKL25Z4 MKL26Z4 MKL46Z4 rp2040 esp8266 esp32 esp32_base
 
 LUA_FILES=	$(patsubst %,%.lua,$(ALL_CHIPS))
 MU4_FILES=	$(LUA_FILES:.lua=.mu4)
@@ -17,6 +22,18 @@ rp2040_path=	https://raw.githubusercontent.com/raspberrypi/pico-sdk/master/src/r
 
 # ESP8266 source path
 esp8266_path=	 https://raw.githubusercontent.com/anarchitech/muforth-anarchitech/master/mu/target/ESP/svd/esp8266/esp8266.svd 
+
+# ESP32 source path
+esp32_path=	https://raw.githubusercontent.com/anarchitech/muforth-anarchitech/master/mu/target/ESP/svd/esp32/esp32.svd
+
+esp32base_path=	https://raw.githubusercontent.com/anarchitech/muforth-anarchitech/master/mu/target/ESP/svd/esp32/esp32_base.svd
+
+esp32c3_path=	https://raw.githubsercontent.com/anarchitech/muforth-anarchitech/master/mu/target/ESP/svd/esp32/esp32c3.svd
+
+
+esp32s2_path=	https://raw.githubsercontent.com/anarchitech/muforth-anarchitech/master/mu/target/ESP/svd/esp32/esp32s2.svd
+
+esp32s3_path=	https://raw.githubsercontent.com/anarchitech/muforth-anarchitech/master/mu/target/ESP/svd/esp32/esp32s3.svd
 
 #### Targets
 
@@ -46,6 +63,21 @@ rp2040.mu4 : rp2040.lua print-regs-generic.lua
 
 esp8266.mu4 : esp8266.lua print-regs-generic.lua
 	lua print-regs-generic.lua $< $(esp8266_path) > $@
+
+esp32.mu4 : esp32.lua print-regs-generic.lua
+	lua print-regs-generic.lua $< $(esp32_path) > $@
+
+esp32_base.mu4 : esp32_base.lua print-regs-generic.lua
+	lua print-regs-generic.lua $< $(esp32base_path) > $@
+
+esp32c3.mu4 : esp32c3.lua print-regs-generic.lua
+	lua print-regs-generic.lua $< $(esp32base_path) > $@
+
+esp32s2.mu4 : esp32s2.lua print-regs-generic.lua
+	lua print-regs-generic.lua $< $(esp32base_path) > $@
+
+esp32s3.mu4 : esp32s3.lua print-regs-generic.lua
+	lua print-regs-generic.lua $< $(esp32base_path) > $@
 
 %.mu4 : %.lua
 	lua print-regs.lua $< > $@
@@ -104,6 +136,22 @@ svd/rp2040.svd : svd
 
 svd/esp8266.svd : svd
 	curl -L -o $@ $(esp8266_path)
+
+svd/esp32.svd : svd
+	curl -L -o $@ $(esp32_path)
+
+svd/esp32_base.svd : svd
+	curl -L -o $@ $(esp32base_path)
+
+svd/esp32c3.svd : svd
+	curl -L -o $@ $(esp32c3_path)
+
+svd/esp32s2.svd : svd
+	curl -L -o $@ $(esp32s2_path)
+
+svd/esp32s3.svd : svd
+	curl -L -o $@ $(esp32s3_path)
+
 .PHONY : unzip-kinetis-packs unzip-stm32-packs unzip-gd32-packs \
 	update
 
@@ -123,7 +171,7 @@ unzip-gd32-packs : get-gd32-packs svd
 
 # XXX The stm32 packs are rather huge. Let's not grab them until/unless we
 # decide to use SVD files rather than ST's .h files.
-update : svd/rp2040.svd svd/esp8266.svd unzip-kinetis-packs #unzip-gd32-packs unzip-stm32-packs
+update : svd/rp2040.svd svd/esp8266.svd svd/esp32.svd svd/esp32_base.svd svd/esp32c3.svd svd/esp32s2.svd svd/esp32s3.svd unzip-kinetis-packs #unzip-gd32-packs unzip-stm32-packs
 
 
 #### Cleaning up the mess
@@ -131,7 +179,7 @@ update : svd/rp2040.svd svd/esp8266.svd unzip-kinetis-packs #unzip-gd32-packs un
 .PHONY : clean clean-svd clean-packs clean-index spotless
 
 clean :
-	rm -f MK*.lua STM32*.lua GD32*.lua rp2040.lua esp8266.lua *.mu4
+	rm -f MK*.lua STM32*.lua GD32*.lua rp2040.lua esp8266.lua esp32.lua esp32_base.lua esp32c3.lua esp32s2.lua esp32s3.lua *.mu4
 
 clean-svd :
 	rm -rf svd/
