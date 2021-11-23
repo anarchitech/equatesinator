@@ -40,6 +40,9 @@ I'm not going to spend many cycles improving this thing.  If you need it, you ne
 
 ### A Brief Note on Building The Equatesinator
 
+Every damn system has a different idea about what to call lua. Use which or whereis; some default installs have it as lua, some as luaXX, some 
+as luaX.X  We highly recommend mkdir bin in your home directory and ln -s /wherever/the/hell/your/real/lua/is lua. The Equatesinator will thank you.
+
 You need to use [GNUmake](https://github.com/nimblemachines/kinetis-chip-equates/issues/1)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
