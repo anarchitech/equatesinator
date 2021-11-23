@@ -16,9 +16,11 @@ Hence, in this repo you'll find Makefile_original and Makefile_esp and original_
 
 ## Warning
 This code, whether this fork or the original is currently brittle and has multiple issues handling svd files that don't fit its expectations.  As work on 
-origin/master is low priority at the moment, you're on your own.  Expect things to break, expect to dive in and get your hands dirty if you're trying extract
-equates from something. **Inclusion of an SVD in the [muforth-anarchitech](https://github.com/anarchitech/muforth-anarchitech) fork is not a guarantee that it will work
-OOTB with The Equatesinator!** 
+origin/master is low priority at the moment, you're on your own.  Expect things to break, expect to dive in and get your hands dirty if you're trying to extract
+equates from something. 
+
+**Inclusion of an SVD in the [muforth-anarchitech](https://github.com/anarchitech/muforth-anarchitech) fork is not a guarantee that  it will work OOTB with The Equatesinator!** 
+
 ### Example: Build esp8266.mu4
 ```
 cd equatesinator
