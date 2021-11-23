@@ -9,17 +9,21 @@ as opposed to, say, esp8266.base.svd.  That one broke the lua script. (You can a
 handle a less than complete svd file.)
 
 One change is that there will be multiple Makefiles to handle certain differences in svd's. There are svd's out there for the ESP8266, for example,
-that are ... less than complete, shall we say.  So, in this repo, right now you'll find Makefile_original and Makefile_esp8266 for example.  
+that are ... less than complete, shall we say.  So, in this repo, right now you'll find Makefile_original and Makefile_esp8266 and original_print-regs-generic.lua
+and novectors_print-regs-generic.lua
 
+### Example: Build esp8266.mu4
 ```
 cd equatesinator
 cp Makefile_esp8266 Makefile
+cp novectors_print-regs-generic.lua print-regs-generic.lua
 make update
 make esp8266.mu4
 ```
 Then, because you'll likely want vectors for the rp2040 and everything else:
 ```
 cp Makefile_original Makefile
+cp original_print-regs-generic.lua print-regs-generic.lua
 make update
 make rp2040.mu4
 ```
