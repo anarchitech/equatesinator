@@ -42,6 +42,10 @@ I'm not going to spend many cycles improving this thing.  If you need it, you ne
 
 You need to use [GNUmake](https://github.com/nimblemachines/kinetis-chip-equates/issues/1)
 
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+(Original README)
+
 # Why?
 
 One of the issues with rolling your own language &ndash; especially if, like [muforth](https://muforth.nimblemachines.com/), it is a cross-compiler that targets microcontrollers &ndash; is that you need to find or create, for every chip you care about, "equates" files that describe the i/o registers, their memory addresses, and their bit definitions.
