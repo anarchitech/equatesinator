@@ -28,12 +28,12 @@ esp32_path=	https://raw.githubusercontent.com/anarchitech/muforth-anarchitech/ma
 
 esp32base_path=	https://raw.githubusercontent.com/anarchitech/muforth-anarchitech/master/mu/target/ESP/svd/esp32/esp32_base.svd
 
-esp32c3_path=	https://raw.githubsercontent.com/anarchitech/muforth-anarchitech/master/mu/target/ESP/svd/esp32/esp32c3.svd
+esp32c3_path=	https://raw.githubusercontent.com/anarchitech/muforth-anarchitech/master/mu/target/ESP/svd/esp32/esp32c3.svd
 
 
-esp32s2_path=	https://raw.githubsercontent.com/anarchitech/muforth-anarchitech/master/mu/target/ESP/svd/esp32/esp32s2.svd
+esp32s2_path=	https://raw.githubusercontent.com/anarchitech/muforth-anarchitech/master/mu/target/ESP/svd/esp32/esp32s2.svd
 
-esp32s3_path=	https://raw.githubsercontent.com/anarchitech/muforth-anarchitech/master/mu/target/ESP/svd/esp32/esp32s3.svd
+esp32s3_path=	https://raw.githubusercontent.com/anarchitech/muforth-anarchitech/master/mu/target/ESP/svd/esp32/esp32s3.svd
 
 #### Targets
 
