@@ -51,7 +51,7 @@ You need to use [GNUmake](https://github.com/nimblemachines/kinetis-chip-equates
 ### Frothing Rage
 
 Finding something to vent your spleen about in this lala land of dweeble tech is as much of a guarantee as a balcony accident if you get on the bad side of the FSB.
-But there is a special place in some of our hearts for XML.  Was it during Berners-Lee's ayahuasca period that he inexplicably felt drawn to turn to sgml inspiration? WTF knows.
+But there is a special place in some of our hearts for XML.  Was it during Berners-Lee's ayahuasca period that he inexplicably felt drawn to turn to sgml for inspiration? WTF knows.
 What **is** known is that an entire desperate and degenerate ecosystem of tools has sprung up to cope with and manage it.  Snivel if you like, but if you compare
 The Equatesinator's generated lua output to the original svd, I think you'd agree you'd have to be one of Tim's dangly bits to not admit that it reads easier. But that's not the point.
 The point is that if structured nested data was done correctly in the first place, we wouldn't need to resort to shenanigans like this to extract useful data out of them.
