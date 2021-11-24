@@ -22,6 +22,11 @@ equates from something.
 
 **Inclusion of an SVD in the [muforth-anarchitech](https://github.com/anarchitech/muforth-anarchitech) fork is not a guarantee that  it will work OOTB with The Equatesinator!** 
 
+As it turns out, one very common "gotcha" that should be dealt with in the lua code are empty elements of the form ```<element/>```. For now, do this:
+```
+sed -i -e '/<element\/>/d' fileName.svd
+```https://hackaday.com/2016/12/23/interactive-esp8266-development-with-punyforth/
+
 ### Example: Build esp8266.mu4
 ```
 cd equatesinator
