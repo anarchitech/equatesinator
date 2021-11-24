@@ -23,6 +23,8 @@ cp novectors_print-regs-generic.lua print-regs-generic.lua
 make update
 make esp8266.mu4
 ```
+### Example: Build rp2040.mu4
+
 If you have an svd that has Vectors in it (rp2040,stm,nxp,[esp32](https://github.com/anarchitech/muforth-anarchitech/mu/target/ESP); here we generate for the rp2040):
 ```
 cp Makefile_original Makefile
