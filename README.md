@@ -15,18 +15,6 @@ peristaltically convulsing gluttonous Mr Creosote. There are svd's out there for
 
 Hence, in this repo you'll find Makefile_original and Makefile_esp and original_print-regs-generic.lua and novectors_print-regs-generic.lua
 
-## Warning
-This code, whether this fork or the original is currently brittle and has multiple issues handling svd files that don't fit its expectations.  As work on 
-origin/master is low priority at the moment, you're on your own.  Expect things to break, expect to dive in and get your hands dirty if you're trying to extract
-equates from something. 
-
-**Inclusion of an SVD in the [muforth-anarchitech](https://github.com/anarchitech/muforth-anarchitech) fork is not a guarantee that  it will work OOTB with The Equatesinator!** 
-
-As it turns out, one very common "gotcha" that should be dealt with in the lua code are empty elements of the form ```<element/>```. For now, do this:
-```
-sed -i -e '/<element\/>/d' fileName.svd
-```https://hackaday.com/2016/12/23/interactive-esp8266-development-with-punyforth/
-
 ### Example: Build esp8266.mu4
 ```
 cd equatesinator
@@ -46,6 +34,18 @@ Always keep the Makefile_original in its original state.
 
 I'm not going to spend many cycles improving this thing.  If you need it, you need it, if you don't, you don't.  It's very muforth specific.
 
+## Warning
+This code, whether this fork or the original is currently brittle and has multiple issues handling svd files that don't fit its expectations.  As work on 
+origin/master is low priority at the moment, you're on your own.  Expect things to break, expect to dive in and get your hands dirty if you're trying to extract
+equates from something. 
+
+**Inclusion of an SVD in the [muforth-anarchitech](https://github.com/anarchitech/muforth-anarchitech) fork is not a guarantee that  it will work OOTB with The Equatesinator!** 
+
+As it turns out, one very common "gotcha" that should be dealt with in the lua code are empty elements of the form ```<element/>```. For now, do this:
+```
+sed -i -e '/<element\/>/d' fileName.svd
+```
+
 ### A Brief Note on Building The Equatesinator
 
 Every damn system has a different idea about what to call lua. Use which or whereis; some default installs have it as lua, some as luaXX, some 
@@ -56,7 +56,7 @@ You need to use [GNUmake](https://github.com/nimblemachines/kinetis-chip-equates
 ### Frothing Rage
 
 Finding something to vent your spleen about in this lala land of dweeble tech is as much of a guarantee as a balcony accident if you get on the bad side of the FSB.
-But there is a special place in some of our hearts for XML.  Was it during Berners-Lee's ayahuasca period that he inexplicably felt drawn to turn to sgml for inspiration? WTF knows.
+But there is a special place in some of our hearts for XML.  Was it during Berners-Lee's ayahuasca period that he felt inexplicably drawn to turn to sgml for inspiration? WTF knows.
 What **is** known is that an entire desperate and degenerate ecosystem of tools has sprung up to cope with and manage it.  Snivel if you like, but if you compare
 The Equatesinator's generated lua output to the original svd, I think you'd agree you'd have to be one of Tim's dangly bits to not admit that it reads easier. But that's not the point.
 The point is that if structured nested data was done correctly in the first place, we wouldn't need to resort to shenanigans like this to extract useful data out of it.
