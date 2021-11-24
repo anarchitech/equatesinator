@@ -1,7 +1,8 @@
 # The Equatesinator ![image](https://user-images.githubusercontent.com/4029/143136924-31405934-8c83-48e8-be76-bb9756db7269.png)
 
+The Equatesinator generates .mu4 equates files from svd/xml files.  It is entirely muforth centric.  If you are using muforth you want to use it.
 
-This is forked from https://github.com/nimblemachines/kinetis-chip-equates.  The name has been changed to protect the diginity of the daf from the
+This is forked from [kinetis-chip-equates](https://github.com/nimblemachines/kinetis-chip-equates).  The name has been changed to protect the diginity of the daf from the
 doodlings of the doof.  For now I've kept the original README below, although that optimistic section "What if my chip is missing?" and the MCUXpresso SDK Builder 
 should be ignored. I feel like it's a bit misleading; the only focus of that weird online SDK seems to be NXP products. 
 
