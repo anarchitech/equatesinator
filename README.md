@@ -58,7 +58,7 @@ You need to use [GNUmake](https://github.com/nimblemachines/kinetis-chip-equates
 ### Getting Additional SVD's
 
 The Equatesinator does not pull in every SVD out there. We're currently
-working on populating a repository of SVD's,[SVD-Vault](https://github.com/anarchitech/SVD-Vault), and it's fairly easy 
+working on populating a repository of SVD's, [SVD-Vault](https://github.com/anarchitech/SVD-Vault), and it's fairly easy 
 to add the ones you care about to the Makefile, but be mindful that you might have
 to tweez them a bit to get them to work.
 
