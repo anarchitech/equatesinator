@@ -1,3 +1,4 @@
+/.gitignore
 /*.mu4
 /MK*.lua
 /esp8266.lua
@@ -10,3 +11,6 @@
 /pack/
 /svd/
 /keil-pack-index*
+/Makefile
+/print-regs-generic.lua
+/GD32VF103.lua

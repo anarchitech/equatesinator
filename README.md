@@ -55,6 +55,13 @@ as luaX.X  We highly recommend mkdir bin in your home directory and ln -s /where
 
 You need to use [GNUmake](https://github.com/nimblemachines/kinetis-chip-equates/issues/1)
 
+### Getting Additional SVD's
+
+The Equatesinator does not pull in every SVD out there. We're currently
+working on populating a repository of SVD's,[SVD-Vault](https://github.com/anarchitech/SVD-Vault), and it's fairly easy 
+to add the ones you care about to the Makefile, but be mindful that you might have
+to tweez them a bit to get them to work.
+
 ### Frothing Rage
 
 Finding something to vent your spleen about in this lala land of dweeble tech is as much of a guarantee as a balcony accident if you get on the bad side of the FSB.
